@@ -2,22 +2,41 @@ import React, { Component } from 'react'
 import {createStackNavigator
     ,createMaterialTopTabNavigator
     ,createBottomTabNavigator,
-    createSwitchNavigator
+    createSwitchNavigator,
+    createAppContainer
 } from 'react-navigation'
 import homePage from '../page/homePage'
 import splashPage from '../page/splashPage'
+import detailPage from '../page/detailPage'
 
 const MainNavigator=createStackNavigator({
     home:{
-        screen:homePage
+        screen:homePage,
+        navigationOptions:{
+            header:null
+        }
+    },
+    detail:{
+        screen:detailPage,
+        navigationOptions:{
+            header:null
+        }
     }
 })
 const splashNavigator=createStackNavigator({
   splash:{
-      screen:splashPage
+      screen:splashPage,
+      navigationOptions:{
+        header:null
+    }
   }
 })
-export default createSwitchNavigator({
-  main:MainNavigator,
-  welcome:splashNavigator
-})
+export default createAppContainer(
+    createSwitchNavigator({
+        init:splashNavigator,
+        main:MainNavigator
+      }),{
+          navigationOptions:{
+        header:null
+    }}
+)

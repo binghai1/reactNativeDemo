@@ -1,7 +1,17 @@
 import React, { Component } from 'react'
-import {Text,View} from 'react-native'
+import {Text,View,StyleSheet} from 'react-native'
+import navUtil from '../navigator/NavigationUtil'
 
 export default class splashPage extends Component {
+   componentDidMount(){
+    this.timeid=setTimeout(() => {
+      const {navigation}=this.props;
+      navUtil.navToHome({navigation})
+      }, 3000);
+   }
+   componentWillUnmount(){
+     this.timeid&&clearTimeout(this.timeid)
+   }
   render() {
     return (
       <View>

@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import {Text,View,StyleSheet} from 'react-native'
 
-export default class homePage extends Component {
+export default class detailPage extends Component {
   render() {
     return (
       <View>
-        <Text style={styles.center}>homePage</Text>
+        <Text style={styles.center}>detailPage</Text>
       </View>
     )
   }
