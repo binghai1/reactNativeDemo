@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import {Text,View,StyleSheet} from 'react-native'
 
-export default class homePage extends Component {
+
+export default class mine extends Component {
   render() {
     return (
       <View>

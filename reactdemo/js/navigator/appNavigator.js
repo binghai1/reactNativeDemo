@@ -5,13 +5,13 @@ import {createStackNavigator
     createSwitchNavigator,
     createAppContainer
 } from 'react-navigation'
-import homePage from '../page/homePage'
+import mainPage from '../page/mainPage'
 import splashPage from '../page/splashPage'
 import detailPage from '../page/detailPage'
 
 const MainNavigator=createStackNavigator({
     home:{
-        screen:homePage,
+        screen:mainPage,
         navigationOptions:{
             header:null
         }
