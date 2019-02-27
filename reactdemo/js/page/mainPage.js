@@ -7,6 +7,7 @@ import Favorite from './Favorite'
 import {createAppContainer,createBottomTabNavigator} from 'react-navigation'
 import Entypo from 'react-native-vector-icons/Entypo'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+import NavigationUtil from '../navigator/NavigationUtil';
 export default class mainPage extends Component {
   _bottomBar(){
     return createAppContainer(createBottomTabNavigator({
@@ -52,6 +53,7 @@ export default class mainPage extends Component {
     }))
   }
   render() {
+    NavigationUtil.navigation=this.props.navigation
     const Tab=this._bottomBar()
     return  (
       <Tab/>
